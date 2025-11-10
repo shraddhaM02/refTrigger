@@ -1,0 +1,55 @@
+{
+  "id": "bgFNCwCKjlXUQAitikang",
+  "name": "NewSchema",
+  "content": {
+    "type": "json-schema",
+    "destination": "source",
+    "content": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "NewSchema",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "age": {
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            "12"
+          ]
+        },
+        "id": {
+          "type": "number",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "male": {
+          "type": "boolean",
+          "default": false,
+          "examples": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "Name",
+        "id",
+        "male",
+        "age"
+      ]
+    },
+    "name": "NewSchema",
+    "schemaSource": "file"
+  },
+  "appId": "kolUHjvkwNIxvdnyWWdNt",
+  "folderId": "eUzxAQYxblhoripFLxnJZ",
+  "itemType": "appSchemas",
+  "gitEnabled": true
+}
