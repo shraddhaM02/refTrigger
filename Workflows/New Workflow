@@ -1,5 +1,5 @@
 {
-  "folderId": "MklQrFgCUlvVhZUwfRVLI",
+  "folderId": "dmDLaHJZmQbdxzdOwgsbP",
   "appId": "kolUHjvkwNIxvdnyWWdNt",
   "id": "RisUUVEPwbtsUCUDKzxoz",
   "name": "New Workflow",
@@ -76,7 +76,7 @@
         "activityType": "SIMPLE",
         "name": "Lookup",
         "description": "",
-        "lookupTable": "lt:{\"id\":\"UsfnpIxQWdnuzGiLGMaON\",\"name\":\"Lookup12\"}",
+        "lookupTable": "lt:{\"id\":\"\",\"name\":\"\"}",
         "workflowLoader": "wf:{\"id\":\"\",\"name\":\"\"}",
         "output": "",
         "sourceSchemas": [
@@ -263,5 +263,13 @@
   "config": {
     "name": "New Workflow"
   },
-  "workflowName": "New Workflow"
+  "workflowName": "New Workflow",
+  "__tableMetadata": [
+    {
+      "id": "unknown",
+      "name": "unknown",
+      "type": "lookup",
+      "missing": true
+    }
+  ]
 }
