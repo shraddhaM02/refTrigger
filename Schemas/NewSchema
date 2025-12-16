@@ -4,6 +4,8 @@
   "content": {
     "type": "json-schema",
     "destination": "source",
+    "schemaSource": "file",
+    "name": "NewSchema",
     "content": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "title": "NewSchema",
@@ -29,13 +31,6 @@
           "examples": [
             0
           ]
-        },
-        "male": {
-          "type": "boolean",
-          "default": false,
-          "examples": [
-            true
-          ]
         }
       },
       "required": [
@@ -44,9 +39,7 @@
         "male",
         "age"
       ]
-    },
-    "name": "NewSchema",
-    "schemaSource": "file"
+    }
   },
   "appId": "kolUHjvkwNIxvdnyWWdNt",
   "folderId": "eUzxAQYxblhoripFLxnJZ",
