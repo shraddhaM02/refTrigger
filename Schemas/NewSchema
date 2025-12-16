@@ -36,7 +36,6 @@
       "required": [
         "Name",
         "id",
-        "male",
         "age"
       ]
     }
