@@ -1,5 +1,5 @@
 {
-  "folderId": "dmDLaHJZmQbdxzdOwgsbP",
+  "folderId": "TCrOrFXojBpNAxSjbmREx",
   "appId": "kolUHjvkwNIxvdnyWWdNt",
   "id": "RisUUVEPwbtsUCUDKzxoz",
   "name": "New Workflow",
@@ -68,14 +68,14 @@
       "stepType": "SIMPLE",
       "icon": "",
       "indicator": "",
-      "description": "",
+      "description": "new description",
       "deletable": true,
       "config": {
         "activityName": "Lookup",
         "activityGroup": "Common",
         "activityType": "SIMPLE",
         "name": "Lookup",
-        "description": "",
+        "description": "new description",
         "lookupTable": "lt:{\"id\":\"\",\"name\":\"\"}",
         "workflowLoader": "wf:{\"id\":\"\",\"name\":\"\"}",
         "output": "",
