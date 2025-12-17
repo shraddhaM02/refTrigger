@@ -4,7 +4,7 @@
   "workflowName": "New Workflow 1",
   "itemType": "workflow",
   "appId": "pRrevsLEDfQYBAsTOJSZl",
-  "folderId": "nChakjgFNckHBwYfaWSxt",
+  "folderId": "PlffrsYzYUjwABgubyZnF",
   "type": "ORCHESTRATION",
   "version": "0.0.1",
   "steps": [
@@ -57,7 +57,6 @@
         "activityGroup": "Common",
         "name": "End",
         "sourceSchemas": [
-          "YohYKjTmUkcFWxTiIHbrr",
           "XTDBTOhRmEVVyzTgwxtKc",
           "AHUzpVpqAVkBlmggqcMpn"
         ]
@@ -86,54 +85,15 @@
         ]
       },
       "activityCluster": []
-    },
-    {
-      "id": "YohYKjTmUkcFWxTiIHbrr",
-      "stepName": "Response",
-      "stepType": "SIMPLE",
-      "icon": "",
-      "indicator": "",
-      "description": "",
-      "deletable": true,
-      "config": {
-        "activityName": "Response",
-        "activityGroup": "Common",
-        "activityType": "SIMPLE",
-        "name": "Response",
-        "description": "",
-        "stream": false,
-        "streamResource": "ref:{\"id\":\"\",\"name\":\"\"}",
-        "output": "",
-        "sourceSchemas": [
-          "AHUzpVpqAVkBlmggqcMpn",
-          "XTDBTOhRmEVVyzTgwxtKc"
-        ],
-        "targetSchema": "bgFNCwCKjlXUQAitikang"
-      },
-      "activityCluster": []
     }
   ],
   "transitions": [
     {
-      "id": "LnwlDMrjrqOsFhNAmjJmv",
+      "id": "PsbIsufHmLnAdDZlPnSzz",
       "from": "XTDBTOhRmEVVyzTgwxtKc",
-      "to": "YohYKjTmUkcFWxTiIHbrr",
-      "handleMap": {
-        "source": "XTDBTOhRmEVVyzTgwxtKc_2",
-        "target": "YohYKjTmUkcFWxTiIHbrr_1"
-      },
-      "name": "",
-      "description": "",
-      "type": "DEFAULT",
-      "lineType": "step",
-      "lineColor": "#8c8c8c"
-    },
-    {
-      "id": "MIWxxrtDPodsqDXKmpAaS",
-      "from": "YohYKjTmUkcFWxTiIHbrr",
       "to": "PPekcdawgEjdutiHUSjIO",
       "handleMap": {
-        "source": "YohYKjTmUkcFWxTiIHbrr_2",
+        "source": "XTDBTOhRmEVVyzTgwxtKc_2",
         "target": "PPekcdawgEjdutiHUSjIO_1"
       },
       "name": "",
@@ -201,24 +161,6 @@
       ],
       "sourcePosition": "right",
       "targetPosition": "left"
-    },
-    "YohYKjTmUkcFWxTiIHbrr": {
-      "x": 368,
-      "y": 48,
-      "handles": [
-        {
-          "type": "source",
-          "position": "left",
-          "id": "YohYKjTmUkcFWxTiIHbrr_1"
-        },
-        {
-          "type": "source",
-          "position": "right",
-          "id": "YohYKjTmUkcFWxTiIHbrr_2"
-        }
-      ],
-      "sourcePosition": "right",
-      "targetPosition": "left"
     }
   },
   "mappings": {
@@ -234,27 +176,6 @@
       "mappings": {
         "Lookup": {
           "id": "$.RESTService.pathParams.id"
-        }
-      },
-      "attributes": {}
-    },
-    "YohYKjTmUkcFWxTiIHbrr": {
-      "metaInfo": {
-        "id": "YohYKjTmUkcFWxTiIHbrr",
-        "versionInfo": {
-          "version": "1.0.0"
-        },
-        "name": "Response",
-        "description": "This activity is for Response."
-      },
-      "mappings": {
-        "Response": {
-          "body": {
-            "Name": "$.Lookup.lookupOutput.Name",
-            "age": "$.Lookup.lookupOutput.age",
-            "id": "$.Lookup.lookupOutput.id",
-            "male": "$.Lookup.lookupOutput.male"
-          }
         }
       },
       "attributes": {}
