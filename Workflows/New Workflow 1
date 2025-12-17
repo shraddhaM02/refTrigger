@@ -4,7 +4,7 @@
   "workflowName": "New Workflow 1",
   "itemType": "workflow",
   "appId": "pRrevsLEDfQYBAsTOJSZl",
-  "folderId": "PlffrsYzYUjwABgubyZnF",
+  "folderId": "wgrAXqqstTpcZWdRncotU",
   "type": "ORCHESTRATION",
   "version": "0.0.1",
   "steps": [
@@ -12,7 +12,7 @@
       "id": "AHUzpVpqAVkBlmggqcMpn",
       "stepName": "RESTService",
       "stepType": "EVENT_SOURCE",
-      "icon": "",
+      "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M17.998 32.5C25.4539 32.5 31.498 26.4558 31.498 19C31.498 11.5442 25.4539 5.5 17.998 5.5C10.5422 5.5 4.49805 11.5442 4.49805 19C4.49805 26.4558 10.5422 32.5 17.998 32.5Z\" fill=\"#415FFF\" fill-opacity=\"0.12\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M5.26953 14.5H30.7318\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M5.26953 23.5039H30.7316\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M18.002 32.1346C21.1086 32.1346 23.627 26.2527 23.627 18.997C23.627 11.7413 21.1086 5.85938 18.002 5.85938C14.8954 5.85938 12.377 11.7413 12.377 18.997C12.377 26.2527 14.8954 32.1346 18.002 32.1346Z\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<g clip-path=\"url(#clip0_13875_175920)\">\n<path d=\"M26.9792 10.5312C26.4327 9.40545 26.2497 8.38287 26.4343 7.48992C26.6573 6.4118 27.4057 5.52515 28.6608 4.85109L27.78 3.037L33.0321 4.3951L30.851 9.36214L29.9753 7.5586C29.208 7.95698 28.6755 8.35426 28.3126 8.79667C27.9205 9.27472 27.7231 9.80047 27.5469 10.4429L27.3268 11.2469L26.9792 10.5312Z\" fill=\"#415FFF\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_13875_175920\">\n<rect width=\"10\" height=\"10\" fill=\"white\" transform=\"translate(22.375 4.36719) rotate(-25.8977)\"/>\n</clipPath>\n</defs>\n</svg>\n",
       "indicator": "",
       "description": "",
       "deletable": true,
@@ -39,15 +39,39 @@
         "headers": [],
         "output": "",
         "showHttpFormSelectionPanel": false,
-        "sourceSchemas": []
+        "sourceSchemas": [],
+        "config.name": "RESTService"
       },
       "activityCluster": []
+    },
+    {
+      "id": "AjmaccfsueBUKQIpFXIyq",
+      "stepName": "RESTClient",
+      "stepType": "SIMPLE",
+      "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M17.998 31.5C25.4539 31.5 31.498 25.4558 31.498 18C31.498 10.5442 25.4539 4.5 17.998 4.5C10.5422 4.5 4.49805 10.5442 4.49805 18C4.49805 25.4558 10.5422 31.5 17.998 31.5Z\" fill=\"#415FFF\" fill-opacity=\"0.12\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M5.26953 13.5H30.7318\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M5.26953 22.5039H30.7316\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M18.002 31.1346C21.1086 31.1346 23.627 25.2527 23.627 17.997C23.627 10.7413 21.1086 4.85938 18.002 4.85938C14.8954 4.85938 12.377 10.7413 12.377 17.997C12.377 25.2527 14.8954 31.1346 18.002 31.1346Z\" stroke=\"#415FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M0.504046 4.94443C1.29707 3.97642 2.14884 3.38175 3.03694 3.17511C4.10928 2.92575 5.22797 3.23373 6.36596 4.09077L7.64394 2.53082L8.61191 7.86856L3.18806 7.9699L4.4586 6.419C3.77532 5.88928 3.19145 5.57229 2.63766 5.42816C2.03929 5.2725 1.4792 5.31358 0.822082 5.42287L-0.000210419 5.55995L0.504046 4.94443Z\" fill=\"#415FFF\"/>\n</svg>\n",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "SIMPLE",
+        "activityGroup": "HTTP",
+        "activityName": "RESTClient",
+        "activityStatus": "APPROVED",
+        "showHttpFormSelectionPanel": true,
+        "name": "RESTClient",
+        "config.name": "RESTClient",
+        "sourceSchemas": [
+          "XTDBTOhRmEVVyzTgwxtKc",
+          "AHUzpVpqAVkBlmggqcMpn"
+        ]
+      },
+      "activityCluster": null
     },
     {
       "id": "PPekcdawgEjdutiHUSjIO",
       "stepName": "End",
       "stepType": "END",
-      "icon": "",
+      "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M18.002 4.5C15.3319 4.5 12.7218 5.29176 10.5018 6.77516C8.2817 8.25856 6.55137 10.367 5.52959 12.8338C4.5078 15.3006 4.24046 18.015 4.76136 20.6337C5.28226 23.2525 6.56801 25.6579 8.45602 27.5459C10.344 29.434 12.7495 30.7197 15.3682 31.2406C17.987 31.7615 20.7014 31.4942 23.1682 30.4724C25.635 29.4506 27.7434 27.7203 29.2268 25.5002C30.7102 23.2801 31.502 20.67 31.502 18C31.502 16.2272 31.1528 14.4717 30.4743 12.8338C29.7959 11.1959 28.8015 9.70765 27.5479 8.45405C26.2943 7.20046 24.8061 6.20606 23.1682 5.52762C21.5303 4.84918 19.7748 4.5 18.002 4.5V4.5ZM21.377 21.375H14.627V14.625H21.377V21.375Z\" fill=\"#F25757\"/>\n <path d=\"M18.002 31.5C25.4578 31.5 31.502 25.4558 31.502 18C31.502 10.5442 25.4578 4.5 18.002 4.5C10.5461 4.5 4.50195 10.5442 4.50195 18C4.50195 25.4558 10.5461 31.5 18.002 31.5Z\" stroke=\"#F25757\" stroke-miterlimit=\"10\"/>\n<path d=\"M21.373 14.625H14.623V21.375H21.373V14.625Z\" stroke=\"#F25757\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
       "indicator": "",
       "description": "",
       "deletable": true,
@@ -57,9 +81,11 @@
         "activityGroup": "Common",
         "name": "End",
         "sourceSchemas": [
+          "AjmaccfsueBUKQIpFXIyq",
           "XTDBTOhRmEVVyzTgwxtKc",
           "AHUzpVpqAVkBlmggqcMpn"
-        ]
+        ],
+        "config.name": "End"
       },
       "activityCluster": []
     },
@@ -67,7 +93,7 @@
       "id": "XTDBTOhRmEVVyzTgwxtKc",
       "stepName": "Lookup",
       "stepType": "SIMPLE",
-      "icon": "",
+      "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"4\" y=\"6\" width=\"28\" height=\"24\" rx=\"2\" fill=\"#E4E7FB\"/><path d=\"M4 9v18.5c0 1 0 2.5 2.5 2.5H30c2 0 2 0 2-2V9c0-1.873-.5-3-3-3H8C7 6 4 6 4 9Z\" stroke=\"#5C41FF\"/><path d=\"M14.714 16H10m5.5 4H10m11-8H10m16 12-1.8-1.8m1.2-3a4.2 4.2 0 1 1-8.4 0 4.2 4.2 0 0 1 8.4 0\" stroke=\"#5C41FF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "indicator": "",
       "description": "",
       "deletable": true,
@@ -82,19 +108,34 @@
         "output": "",
         "sourceSchemas": [
           "AHUzpVpqAVkBlmggqcMpn"
-        ]
+        ],
+        "config.name": "Lookup"
       },
       "activityCluster": []
     }
   ],
   "transitions": [
     {
-      "id": "PsbIsufHmLnAdDZlPnSzz",
-      "from": "XTDBTOhRmEVVyzTgwxtKc",
+      "id": "KDCaHsJAVtKOMJYfkJope",
+      "from": "AjmaccfsueBUKQIpFXIyq",
       "to": "PPekcdawgEjdutiHUSjIO",
       "handleMap": {
-        "source": "XTDBTOhRmEVVyzTgwxtKc_2",
+        "source": "AjmaccfsueBUKQIpFXIyq_2",
         "target": "PPekcdawgEjdutiHUSjIO_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "LQHaILrnFvTaNdrBfVVKO",
+      "from": "XTDBTOhRmEVVyzTgwxtKc",
+      "to": "AjmaccfsueBUKQIpFXIyq",
+      "handleMap": {
+        "source": "XTDBTOhRmEVVyzTgwxtKc_2",
+        "target": "AjmaccfsueBUKQIpFXIyq_1"
       },
       "name": "",
       "description": "",
@@ -157,6 +198,24 @@
           "type": "source",
           "position": "right",
           "id": "XTDBTOhRmEVVyzTgwxtKc_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "AjmaccfsueBUKQIpFXIyq": {
+      "x": 244,
+      "y": 48,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "AjmaccfsueBUKQIpFXIyq_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "AjmaccfsueBUKQIpFXIyq_2"
         }
       ],
       "sourcePosition": "right",
