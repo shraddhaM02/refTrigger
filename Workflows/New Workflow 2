@@ -1,18 +1,50 @@
 {
   "id": "FIJeZKwnJNRlcaqUloIhF",
   "name": "New Workflow 2",
-  "workflowName": "New Workflow",
+  "workflowName": "New Workflow 2",
   "itemType": "workflow",
   "appId": "pRrevsLEDfQYBAsTOJSZl",
-  "folderId": "HZUfPVSsSsHgNTSmdVSRW",
+  "folderId": "gRqOFZqcgulENdwrKWbtN",
   "type": "ORCHESTRATION",
   "version": "0.0.1",
   "steps": [
     {
+      "id": "CjTCsccdtMiIHtFrnikDb",
+      "stepName": "RESTService",
+      "stepType": "EVENT_SOURCE",
+      "icon": "",
+      "indicator": "",
+      "description": "This resource is for HTTP Server",
+      "deletable": true,
+      "config": {
+        "name": "RESTService",
+        "description": "",
+        "path": "",
+        "method": [
+          "GET"
+        ],
+        "allowedMediaTypes": [
+          "application/json"
+        ],
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "output": "",
+        "activityType": "EVENT_SOURCE",
+        "activityGroup": "HTTP",
+        "activityName": "RESTService",
+        "activityStatus": "APPROVED",
+        "showHttpFormSelectionPanel": true,
+        "config.name": "RESTService",
+        "sourceSchemas": []
+      },
+      "activityCluster": null
+    },
+    {
       "id": "JtFaGwVfiryZatMhKtnqK",
       "stepName": "End",
       "stepType": "END",
-      "icon": "StopActivityIcon",
+      "icon": "",
       "indicator": "",
       "description": "",
       "deletable": true,
@@ -20,31 +52,20 @@
         "activityType": "END",
         "activityName": "End",
         "activityGroup": "Common",
-        "name": "End"
-      }
-    },
-    {
-      "id": "LZAVHaIEQmZGhqdnhyvCn",
-      "stepName": "Select Trigger",
-      "stepType": "EVENT_SOURCE",
-      "icon": "SelectTriggerIcon",
-      "indicator": "",
-      "description": "",
-      "deletable": true,
-      "config": {
-        "activityType": "EVENT_SOURCE",
-        "activityName": "Start",
-        "activityGroup": "Common"
+        "name": "End",
+        "sourceSchemas": [
+          "CjTCsccdtMiIHtFrnikDb"
+        ]
       }
     }
   ],
   "transitions": [
     {
       "id": "initialEdge",
-      "from": "LZAVHaIEQmZGhqdnhyvCn",
+      "from": "CjTCsccdtMiIHtFrnikDb",
       "to": "JtFaGwVfiryZatMhKtnqK",
       "handleMap": {
-        "source": "LZAVHaIEQmZGhqdnhyvCn_1",
+        "source": "CjTCsccdtMiIHtFrnikDb_1",
         "target": "JtFaGwVfiryZatMhKtnqK_1"
       },
       "name": "",
@@ -55,29 +76,31 @@
     }
   ],
   "diagram": {
-    "LZAVHaIEQmZGhqdnhyvCn": {
-      "x": 16,
-      "y": 48,
-      "handles": [
-        {
-          "type": "source",
-          "position": "right"
-        }
-      ],
-      "sourcePosition": "right",
-      "targetPosition": null
-    },
     "JtFaGwVfiryZatMhKtnqK": {
       "x": 512,
       "y": 48,
       "handles": [
         {
           "type": "source",
-          "position": "left"
+          "position": "left",
+          "id": "JtFaGwVfiryZatMhKtnqK_1"
         }
       ],
       "sourcePosition": null,
       "targetPosition": "left"
+    },
+    "CjTCsccdtMiIHtFrnikDb": {
+      "x": 16,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "CjTCsccdtMiIHtFrnikDb_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
     }
   },
   "mappings": {},
