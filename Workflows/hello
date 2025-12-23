@@ -2,7 +2,7 @@
   "folderId": "TCrOrFXojBpNAxSjbmREx",
   "appId": "kolUHjvkwNIxvdnyWWdNt",
   "id": "RisUUVEPwbtsUCUDKzxoz",
-  "name": "New Workflow",
+  "name": "hello",
   "type": "ORCHESTRATION",
   "itemType": "workflow",
   "version": "0.0.1",
@@ -261,7 +261,7 @@
     }
   },
   "config": {
-    "name": "New Workflow"
+    "name": "hello"
   },
   "workflowName": "New Workflow",
   "__tableMetadata": [
