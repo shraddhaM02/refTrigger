@@ -1,0 +1,300 @@
+{
+  "id": "PXdkoMgxytOVUQsOEOwon",
+  "name": "GetTodos",
+  "workflowName": "GetTodos",
+  "itemType": "workflow",
+  "appId": "pRrevsLEDfQYBAsTOJSZl",
+  "folderId": "eFZlskCONNrhFsAmoFvmi",
+  "type": "ORCHESTRATION",
+  "version": "0.0.1",
+  "steps": [
+    {
+      "id": "bUupBsdzjCzgjvQAcIhla",
+      "stepName": "GetTodos",
+      "stepType": "SIMPLE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "RESTClient",
+        "activityGroup": "HTTP",
+        "activityType": "SIMPLE",
+        "name": "GetTodos",
+        "description": "",
+        "sourceSchemas": [
+          "ezLtDQFLCPuRIOFRsnzQs"
+        ],
+        "output": "fZWJJqWMyANcODeOYXPyn",
+        "scheme": "HTTPS",
+        "host": "jsonplaceholder.typicode.com",
+        "uri": "/todos",
+        "method": "GET",
+        "authType": "NO_AUTH",
+        "timeout": 15000,
+        "headers": [],
+        "queryParams": [],
+        "pathParams": []
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "ezLtDQFLCPuRIOFRsnzQs",
+      "stepName": "RESTService",
+      "stepType": "EVENT_SOURCE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "RESTService",
+        "activityGroup": "HTTP",
+        "activityType": "EVENT_SOURCE",
+        "name": "RESTService",
+        "description": "",
+        "sourceSchemas": [],
+        "path": "/v1/todos",
+        "method": [
+          "GET"
+        ],
+        "allowedMediaTypes": [
+          "application/json"
+        ],
+        "headers": [],
+        "queryParams": [],
+        "pathParams": []
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "rcvDlmQxlPDyhYaajogBV",
+      "stepName": "GenerateError",
+      "stepType": "SIMPLE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "GenerateError",
+        "activityGroup": "Common",
+        "activityType": "SIMPLE",
+        "name": "GenerateError",
+        "description": "",
+        "sourceSchemas": [
+          "bUupBsdzjCzgjvQAcIhla"
+        ]
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "YxTjzXYoehKDxLrxZlxOg",
+      "stepName": "End",
+      "stepType": "END",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "End",
+        "activityGroup": "Common",
+        "activityType": "END",
+        "name": "End",
+        "description": "",
+        "sourceSchemas": [
+          "bUupBsdzjCzgjvQAcIhla",
+          "rcvDlmQxlPDyhYaajogBV"
+        ],
+        "targetSchema": "fZWJJqWMyANcODeOYXPyn"
+      },
+      "activityCluster": null
+    }
+  ],
+  "transitions": [
+    {
+      "id": "eYrWzaMdjMJWnOdkxdCyL",
+      "from": "bUupBsdzjCzgjvQAcIhla",
+      "to": "YxTjzXYoehKDxLrxZlxOg",
+      "handleMap": {
+        "source": "bUupBsdzjCzgjvQAcIhla_2",
+        "target": "YxTjzXYoehKDxLrxZlxOg_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "IkSiTrvpJyFFowjQtMrLS",
+      "from": "ezLtDQFLCPuRIOFRsnzQs",
+      "to": "bUupBsdzjCzgjvQAcIhla",
+      "handleMap": {
+        "source": "ezLtDQFLCPuRIOFRsnzQs_1",
+        "target": "bUupBsdzjCzgjvQAcIhla_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "VZuJKBWQSDjzLGpjKeCEt",
+      "from": "bUupBsdzjCzgjvQAcIhla",
+      "to": "rcvDlmQxlPDyhYaajogBV",
+      "handleMap": {
+        "source": "bUupBsdzjCzgjvQAcIhla_2",
+        "target": "rcvDlmQxlPDyhYaajogBV_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "ERROR",
+      "lineType": "step",
+      "lineColor": "#ff7875"
+    },
+    {
+      "id": "wKxTZngKhJbTfzErRUcXh",
+      "from": "rcvDlmQxlPDyhYaajogBV",
+      "to": "YxTjzXYoehKDxLrxZlxOg",
+      "handleMap": {
+        "source": "rcvDlmQxlPDyhYaajogBV_2",
+        "target": "YxTjzXYoehKDxLrxZlxOg_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    }
+  ],
+  "diagram": {
+    "ezLtDQFLCPuRIOFRsnzQs": {
+      "x": 60,
+      "y": 60,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "ezLtDQFLCPuRIOFRsnzQs_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    },
+    "bUupBsdzjCzgjvQAcIhla": {
+      "x": 360,
+      "y": 60,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "bUupBsdzjCzgjvQAcIhla_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "bUupBsdzjCzgjvQAcIhla_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "rcvDlmQxlPDyhYaajogBV": {
+      "x": 660,
+      "y": 60,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "rcvDlmQxlPDyhYaajogBV_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "rcvDlmQxlPDyhYaajogBV_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "YxTjzXYoehKDxLrxZlxOg": {
+      "x": 960,
+      "y": 60,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "YxTjzXYoehKDxLrxZlxOg_1"
+        }
+      ],
+      "sourcePosition": null,
+      "targetPosition": "left"
+    }
+  },
+  "mappings": {
+    "bUupBsdzjCzgjvQAcIhla": {
+      "metaInfo": {
+        "id": "bUupBsdzjCzgjvQAcIhla",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "GetTodos",
+        "description": ""
+      },
+      "mappings": {
+        "GetTodos": {
+          "headers": {},
+          "queryParams": {},
+          "pathParams": {}
+        }
+      },
+      "attributes": {}
+    },
+    "rcvDlmQxlPDyhYaajogBV": {
+      "metaInfo": {
+        "id": "rcvDlmQxlPDyhYaajogBV",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "GenerateError",
+        "description": ""
+      },
+      "mappings": {
+        "GenerateError": {
+          "errorCode": "$.error.errorCode",
+          "errorMessage": "$.error.errorMsg",
+          "details": {
+            "#copyOf": "$.error.errorDetails"
+          }
+        }
+      },
+      "attributes": {}
+    },
+    "YxTjzXYoehKDxLrxZlxOg": {
+      "metaInfo": {
+        "id": "YxTjzXYoehKDxLrxZlxOg",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "End",
+        "description": ""
+      },
+      "mappings": {
+        "End": {
+          "todos": {
+            "#copyOf": "$.GetTodos.httpResponse.body"
+          }
+        }
+      },
+      "attributes": {}
+    }
+  },
+  "notes": [],
+  "config": {
+    "name": "GetTodos",
+    "description": "",
+    "workflowAttributes": [],
+    "context": "{}",
+    "errorConfig": []
+  }
+}

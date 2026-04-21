@@ -1,0 +1,300 @@
+{
+  "id": "LlXiTjPJHuSUULFHJrfUR",
+  "name": "GetUsers",
+  "workflowName": "GetUsers",
+  "itemType": "workflow",
+  "appId": "pRrevsLEDfQYBAsTOJSZl",
+  "folderId": "gUUojSMiHElIUJVTGVSTA",
+  "type": "ORCHESTRATION",
+  "version": "0.0.1",
+  "steps": [
+    {
+      "id": "WQcarTMVokhNXqgoEJsHg",
+      "stepName": "RESTService",
+      "stepType": "EVENT_SOURCE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "RESTService",
+        "activityGroup": "HTTP",
+        "activityType": "EVENT_SOURCE",
+        "name": "RESTService",
+        "description": "",
+        "sourceSchemas": [],
+        "path": "/users",
+        "method": [
+          "GET"
+        ],
+        "allowedMediaTypes": [
+          "application/json"
+        ],
+        "headers": [],
+        "queryParams": [],
+        "pathParams": []
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "OaSClclToPfYfIHMFjmrG",
+      "stepName": "GetUsers",
+      "stepType": "SIMPLE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "RESTClient",
+        "activityGroup": "HTTP",
+        "activityType": "SIMPLE",
+        "name": "GetUsers",
+        "description": "",
+        "sourceSchemas": [
+          "WQcarTMVokhNXqgoEJsHg"
+        ],
+        "output": "rLhkqegyTmPvuquswNjlq",
+        "scheme": "HTTPS",
+        "host": "jsonplaceholder.typicode.com",
+        "uri": "/users",
+        "method": "GET",
+        "authType": "NO_AUTH",
+        "timeout": 15000,
+        "headers": [],
+        "queryParams": [],
+        "pathParams": []
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "eIfRrGfFAPDlnjSDKisZI",
+      "stepName": "GenerateError",
+      "stepType": "SIMPLE",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "GenerateError",
+        "activityGroup": "Common",
+        "activityType": "SIMPLE",
+        "name": "GenerateError",
+        "description": "",
+        "sourceSchemas": [
+          "OaSClclToPfYfIHMFjmrG"
+        ]
+      },
+      "activityCluster": null
+    },
+    {
+      "id": "oNxnGvxmossbfMIPcGqJr",
+      "stepName": "End",
+      "stepType": "END",
+      "icon": "",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityName": "End",
+        "activityGroup": "Common",
+        "activityType": "END",
+        "name": "End",
+        "description": "",
+        "sourceSchemas": [
+          "OaSClclToPfYfIHMFjmrG",
+          "eIfRrGfFAPDlnjSDKisZI"
+        ],
+        "targetSchema": "rLhkqegyTmPvuquswNjlq"
+      },
+      "activityCluster": null
+    }
+  ],
+  "transitions": [
+    {
+      "id": "QRiqgFspjKtcQgglGeZtb",
+      "from": "WQcarTMVokhNXqgoEJsHg",
+      "to": "OaSClclToPfYfIHMFjmrG",
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c",
+      "handleMap": {
+        "source": "WQcarTMVokhNXqgoEJsHg_1",
+        "target": "OaSClclToPfYfIHMFjmrG_1"
+      }
+    },
+    {
+      "id": "fWmKbXjrMZSqGzFMCuyjh",
+      "from": "OaSClclToPfYfIHMFjmrG",
+      "to": "oNxnGvxmossbfMIPcGqJr",
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c",
+      "handleMap": {
+        "source": "OaSClclToPfYfIHMFjmrG_2",
+        "target": "oNxnGvxmossbfMIPcGqJr_1"
+      }
+    },
+    {
+      "id": "iWVMsoAwMgyCLwCxfGQTh",
+      "from": "OaSClclToPfYfIHMFjmrG",
+      "to": "eIfRrGfFAPDlnjSDKisZI",
+      "name": "",
+      "description": "",
+      "type": "ERROR",
+      "lineType": "step",
+      "lineColor": "#ff7875",
+      "handleMap": {
+        "source": "OaSClclToPfYfIHMFjmrG_2",
+        "target": "eIfRrGfFAPDlnjSDKisZI_1"
+      }
+    },
+    {
+      "id": "bOwIrKoROWYFaFTfskDoT",
+      "from": "eIfRrGfFAPDlnjSDKisZI",
+      "to": "oNxnGvxmossbfMIPcGqJr",
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c",
+      "handleMap": {
+        "source": "eIfRrGfFAPDlnjSDKisZI_2",
+        "target": "oNxnGvxmossbfMIPcGqJr_1"
+      }
+    }
+  ],
+  "diagram": {
+    "WQcarTMVokhNXqgoEJsHg": {
+      "x": 60,
+      "y": 60,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "WQcarTMVokhNXqgoEJsHg_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    },
+    "OaSClclToPfYfIHMFjmrG": {
+      "x": 360,
+      "y": 60,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "OaSClclToPfYfIHMFjmrG_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "OaSClclToPfYfIHMFjmrG_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "eIfRrGfFAPDlnjSDKisZI": {
+      "x": 660,
+      "y": 60,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "eIfRrGfFAPDlnjSDKisZI_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "eIfRrGfFAPDlnjSDKisZI_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    "oNxnGvxmossbfMIPcGqJr": {
+      "x": 960,
+      "y": 60,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "oNxnGvxmossbfMIPcGqJr_1"
+        }
+      ],
+      "sourcePosition": null,
+      "targetPosition": "left"
+    }
+  },
+  "mappings": {
+    "OaSClclToPfYfIHMFjmrG": {
+      "metaInfo": {
+        "id": "OaSClclToPfYfIHMFjmrG",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "GetUsers",
+        "description": ""
+      },
+      "mappings": {
+        "GetUsers": {
+          "headers": {},
+          "queryParams": {},
+          "pathParams": {}
+        }
+      },
+      "attributes": {}
+    },
+    "eIfRrGfFAPDlnjSDKisZI": {
+      "metaInfo": {
+        "id": "eIfRrGfFAPDlnjSDKisZI",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "GenerateError",
+        "description": ""
+      },
+      "mappings": {
+        "GenerateError": {
+          "errorCode": "$.error.errorCode",
+          "errorMessage": "$.error.errorMsg",
+          "details": {
+            "#copyOf": "$.error.errorDetails"
+          }
+        }
+      },
+      "attributes": {}
+    },
+    "oNxnGvxmossbfMIPcGqJr": {
+      "metaInfo": {
+        "id": "oNxnGvxmossbfMIPcGqJr",
+        "versionInfo": {
+          "version": "1.0.0"
+        },
+        "name": "End",
+        "description": ""
+      },
+      "mappings": {
+        "End": {
+          "users": {
+            "#copyOf": "$.GetUsers.httpResponse.body"
+          }
+        }
+      },
+      "attributes": {}
+    }
+  },
+  "notes": [],
+  "config": {
+    "name": "GetUsers",
+    "description": "",
+    "workflowAttributes": [],
+    "context": "{}",
+    "errorConfig": []
+  }
+}
